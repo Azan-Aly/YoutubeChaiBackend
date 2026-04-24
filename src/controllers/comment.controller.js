@@ -1,6 +1,6 @@
-import { asyncHandler } from "../utils/asyncHandler";
+import { asyncHandler } from "../utils/asyncHandler.js"
 
-const getVideoComment = asyncHandler(async (req, res) => {
+const getVideoComments = asyncHandler(async (req, res) => {
     // TODO: get all comments for a video
     const { videoId } = req.params
     const {page = 1, limit = 1} = req.query
@@ -23,7 +23,7 @@ const deleteComment = asyncHandler(async (req, res) => {
 
 
 export {
-    getVideoComment,
+    getVideoComments,
     addComment,
     updateComment,
     deleteComment
