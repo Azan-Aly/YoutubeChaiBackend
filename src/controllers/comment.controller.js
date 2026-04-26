@@ -54,7 +54,6 @@ const addComment = asyncHandler(async (req, res) => {
         return res.status(200)
             .json(new ApiResponse(200, newComment, "Comment added successfully"));
     } catch (error) {
-        // If an error occurs during the process, throw an error
         throw new ApiError(500, error, "Some error occurred while adding comment");
     }
 });
